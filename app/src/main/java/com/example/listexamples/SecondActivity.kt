@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
+import android.widget.RadioGroup
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,8 +26,17 @@ class SecondActivity : AppCompatActivity() {
         findViewById<Button>(R.id.button_show).setOnClickListener {
             val number = editNumber.text.toString().toInt()
             items.clear()
-            for (i in 1..number)
-                items.add("$i")
+            val selectedId = findViewById<RadioGroup>(R.id.radioGroup).checkedRadioButtonId
+            if (selectedId == R.id.rad_songuyen) {
+                for (i in 1..number)
+                    items.add("$i")
+            } else if (selectedId == R.id.rad_sole) {
+                for (i in 1..number step 2)
+                    items.add("$i")
+            } else {
+                for (i in 2..number step 2)
+                    items.add("$i")
+            }
             adapter.notifyDataSetChanged()
         }
     }

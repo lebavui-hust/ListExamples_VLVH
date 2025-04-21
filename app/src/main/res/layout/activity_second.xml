@@ -45,22 +45,23 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_number">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rad_songuyen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="So nguyen" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rad_sole"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="So le" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rad_sochan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="So chan" />
     </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
